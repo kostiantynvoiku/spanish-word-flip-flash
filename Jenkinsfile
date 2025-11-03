@@ -28,6 +28,8 @@ pipeline {
                         }
                     }
                     steps {
+                        // Install devDependencies including vitest
+                        sh 'npm ci --include=dev'
                         // Unit tests with Vitest
                         sh 'npx vitest run --reporter=verbose'
                     }
