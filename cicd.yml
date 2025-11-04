@@ -93,3 +93,4 @@ jobs:
         run: npm ci
       - name: Run Playwright E2E
         run: npx playwright test
+ 
