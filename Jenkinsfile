@@ -75,7 +75,7 @@ pipeline {
             }
             post {
                 always {
-                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, reportDir: 'reports-e2e/html/', reportFiles: 'index.html', reportName: 'E2E Test Report'])
+                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'reports-e2e/html/', reportFiles: 'index.html', reportName: 'E2E Test Report'])
                     junit stdioRetention: 'ALL', testResults: 'reports-e2e/junit.xml'
                 }
             }
